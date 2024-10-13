@@ -67,27 +67,27 @@ El objetivo principal de este proyecto es implementar un sistema de carrito de c
 
 ## Imágenes del proyecto
 
-![1home](link"1home")
+![1home](https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen1.png "1home")
 
 ---
 
 <div align="center">
-  <img src="" alt="imagen2" width="45%" />
-  <img src="" alt="imagen3" width="45%" />
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen2.png" alt="imagen2" width="45%" />
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen3.png" alt="imagen3" width="45%" />
 </div>
 
 ---
 
 <div align="center">
-  <img src="" alt="imagen4" width="45%" />
-  <img src="" alt="imagen5" width="45%"/>
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen4.png" alt="imagen4" width="45%" />
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen5.png" alt="imagen5" width="45%"/>
 </div>
 
 ---
 
 <div align="center">
-  <img src="" alt="imagen6" width="45%" />
-  <img src="" alt="imagen7" width="45%" />
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen6.png" alt="imagen6" width="45%" />
+  <img src="https://github.com/Estefani-a/e-commerce_angular/blob/main/images/imagen7.png" alt="imagen7" width="45%" />
 </div>
 
  &nbsp;
