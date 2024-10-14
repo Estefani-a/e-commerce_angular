@@ -1,0 +1,85 @@
+.cart-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f7fafc;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    width: 100%;
+}
+  
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+.button {
+    width: 100%;
+    max-width: 500px;
+    font-size: 18px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+  
+.comun {
+    background-color: #ffab07;
+}
+  
+.comun:hover {
+    background-color: #e69b05;
+}
+  
+.fecha-especial {
+    background-color: #FF5733;
+}
+  
+.fecha-especial:hover {
+    background-color: #e74c3c;
+}
+  
+.vip {
+    background-color: #C70039;
+}
+  
+.vip:hover {
+    background-color: #a5002f;
+}
+  
+.inicio {
+    background-color: blue;
+    width: 50%;
+    max-width: 300px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+  
+.inicio:hover {
+    background-color: darkblue;
+}
+  
+.back-button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+  

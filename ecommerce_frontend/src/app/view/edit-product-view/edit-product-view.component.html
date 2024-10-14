@@ -1,0 +1,28 @@
+<div class="edit-product-view">
+    <div class="container mt-5">
+      <h2 class="text-center">Editar Producto</h2>
+  
+      <div *ngIf="successAlert" class="alert alert-success">
+        El producto "{{ productName }}" ha sido modificado con éxito.
+      </div>
+  
+      <div class="form-group text-center">
+        <input type="text" [(ngModel)]="productName" placeholder="Nombre del Producto" class="form-control" />
+      </div>
+      <div class="form-group text-center">
+        <input type="number" [(ngModel)]="productPrice" placeholder="Precio" class="form-control" />
+      </div>
+      
+      <div class="text-center mt-3">
+        <button (click)="handleSave()" class="btn btn-success btn-block">Guardar Cambios</button>
+      </div>
+  
+      <div class="text-center mt-4">
+        <button (click)="navigateToProductList()" class="btn btn-primary btn-sm btn-custom">
+          Volver a Lista de Productos
+        </button>
+      </div>
+    </div>
+</div>
+
+  
