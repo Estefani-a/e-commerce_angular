@@ -1,0 +1,52 @@
+.product-list-view {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+  
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none;
+}
+
+.table tbody tr {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead {
+    border-bottom: 2px solid #ddd;
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.me-2 {
+    margin-right: 8px;
+}
+
+button {
+    font-weight: bold;
+}
+  
