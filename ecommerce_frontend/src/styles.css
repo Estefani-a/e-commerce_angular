@@ -1,0 +1,9 @@
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
+
+body {
+    font-family: 'Google Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}

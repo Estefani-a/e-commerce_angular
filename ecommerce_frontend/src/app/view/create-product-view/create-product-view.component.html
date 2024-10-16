@@ -1,0 +1,59 @@
+<div class="create-product-view">
+    <div class="container mt-5">
+      <h2 class="text-center">Crear Nuevo Producto</h2>
+      <form (submit)="handleAddProduct($event)" class="form-container">
+        <div class="mb-3">
+          <label for="productName" class="form-label">Nombre del Producto</label>
+          <input 
+            type="text" 
+            id="productName" 
+            class="form-control" 
+            placeholder="Nombre del Producto" 
+            [(ngModel)]="productName" 
+            name="productName"
+            required />
+        </div>
+        <div class="mb-3">
+          <label for="productPrice" class="form-label">Precio del Producto</label>
+          <input 
+            type="number" 
+            id="productPrice" 
+            class="form-control" 
+            placeholder="Precio del Producto" 
+            [(ngModel)]="productPrice" 
+            name="productPrice"
+            required 
+            min="0" />
+        </div>
+        <button 
+          type="submit" 
+          class="btn btn-warning w-100" 
+          [disabled]="!productName || productPrice === undefined || productPrice <= 0">
+          Agregar Producto
+        </button>
+      </form>
+    
+      <div class="mt-4">
+        <h3 class="text-center">Productos Creados</h3>
+        <div class="products-container">
+          <div *ngIf="products.length > 0; else noProducts">
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let product of products">
+                {{ product.name }} - ${{ product.price }}
+              </li>
+            </ul>
+          </div>
+          <ng-template #noProducts>
+            <p class="text-center">No hay productos creados.</p>
+          </ng-template>
+        </div>
+      </div>
+    
+      <div class="text-center mt-4">
+        <button (click)="router.navigate(['/'])" class="btn btn-primary">
+          Volver al Inicio
+        </button>
+      </div>
+    </div>
+</div>  
+  

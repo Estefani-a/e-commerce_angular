@@ -1,0 +1,33 @@
+<div class="cart-list-view">
+    <div class="container mt-5">
+        <h2 class="text-center">Lista de Carritos Creados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo de Carrito</th>
+                    <th>Estado</th>
+                    <th>Monto Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of carts">
+                    <td>{{ cart.id }}</td>
+                    <td>{{ cart.type }}</td>
+                    <td>{{ cart.state }}</td>
+                    <td>${{ getTotal(cart).toFixed(2) }}</td>
+                    <td>
+                        <div class="button-group">
+                            <button class="btn btn-primary btn-sm" (click)="handleSelect(cart.id)">Ver carrito</button>
+                            <button class="btn btn-danger btn-sm" (click)="handleDelete(cart.id)">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" (click)="router.navigate(['/'])">Volver al Inicio</button>
+        </div>
+    </div>
+</div>

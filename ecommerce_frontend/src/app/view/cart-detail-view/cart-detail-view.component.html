@@ -1,0 +1,89 @@
+<div class="cart-detail-view">
+    <!--<h2>Detalles del Carrito</h2>-->
+  
+    <div *ngIf="successAlert" class="alert alert-success">
+      ¡Producto agregado con exito!
+    </div>
+    
+    <div class="flex-container">
+      <div class="available-products">
+        <h3>Productos Disponibles</h3>
+        <table mat-table [dataSource]="availableProducts" class="mat-elevation-z8 table">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let product">{{product.id}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let product">{{product.name}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>Precio</th>
+            <td mat-cell *matCellDef="let product">${{product.price}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="actions" class="mat-column-actions">
+            <th mat-header-cell *matHeaderCellDef>Acciones</th>
+            <td mat-cell *matCellDef="let product" class="mat-column-actions">
+              <button (click)="handleAddProduct(product.id)" mat-button class="add-button">Agregar</button>
+            </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+  
+      <div class="cart-details">
+        <h3>Detalles del Carrito</h3>
+        <p>ID de Carrito: {{ cart.id }}</p>
+        <p>Tipo de Carrito: {{ cart.type }}</p>
+        <p>Total del Carrito: ${{ discounts.total }}</p>
+        <p>Descuento: ${{ discounts.discountAmount }}</p>
+        <p>Total Final: ${{ discounts.total - discounts.discountAmount }}</p>
+        <!--<p>{{ discountDescription }}</p>-->
+
+        <!-- Alerta Informativa o Mensaje de Descripción -->
+        <div class="alert alert-info">
+            <p *ngIf="discounts.discountAmount > 0">{{ discountDescription }}</p>
+            <p *ngIf="discounts.discountAmount === 0 && cartProducts.length > 0">No hay descuentos aplicables.</p>
+        </div>
+  
+        <h4 class="cart-products-header">Productos en el Carrito</h4>
+        <table mat-table [dataSource]="cartProducts" class="mat-elevation-z8 table">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let product">{{product.id}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let product">{{product.name}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>Precio</th>
+            <td mat-cell *matCellDef="let product">${{product.price}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef class="mat-column-actions">Acciones</th>
+            <td mat-cell *matCellDef="let product" class="mat-column-actions">
+              <button (click)="handleDeleteProduct(product.id)" mat-button class="remove-button">Eliminar</button>
+            </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedCartColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedCartColumns;"></tr>
+        </table>
+  
+        <div class="button-container">
+            <button (click)="handleBuyCart()" mat-raised-button class="buy-button">Comprar</button>
+            <button (click)="navigateToCartList()" mat-button class="back-button">Volver a Lista de Carritos</button>
+        </div>
+      </div>
+    </div>
+</div>
+  

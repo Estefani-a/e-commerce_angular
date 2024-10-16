@@ -1,0 +1,26 @@
+<div class="home-view">
+    <div class="container">
+        <div class="card">
+            <img src="./assets/carrito0.svg" alt="Ilustración de carrito" class="icon" />
+            <h2>Carrito</h2>
+            <button (click)="router.navigate(['/create-cart'])" class="button create-cart">
+                Crear Carrito
+            </button>
+            <button (click)="router.navigate(['/carts'])" class="button outline">
+                Ver Carritos Creados
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="./assets/caja0.svg" alt="Ilustración de productos" class="icon" />
+            <h2>Productos</h2>
+            <button (click)="router.navigate(['/create-product'])" class="button create-product">
+                Crear Producto
+            </button>
+            <button (click)="router.navigate(['/product-list'])" class="button list-products">
+                Listado de Productos
+            </button>
+        </div>
+    </div>
+</div>
+  

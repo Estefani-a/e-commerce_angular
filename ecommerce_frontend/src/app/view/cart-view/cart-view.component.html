@@ -1,0 +1,26 @@
+<div class="cart-view">
+    <div class="container">
+      <h2>Selecciona el tipo de carrito que deseas crear</h2>
+      <button (click)="handleCreateCart('Comun')" class="button comun">
+        Carrito Común
+      </button>
+      <button (click)="handleCreateCart('Fecha Especial')" class="button fecha-especial">
+        Carrito Promocionable por Fecha Especial
+      </button>
+      <button (click)="handleCreateCart('VIP')" class="button vip">
+        Carrito Promocionable por Usuario VIP
+      </button>
+    </div>
+  
+    <div class="back-button">
+      <button (click)="router.navigate(['/'])" class="button inicio">
+        Volver al Inicio
+      </button>
+    </div>
+
+     <!-- Modal Bootstrap -->
+    <div *ngIf="showAlert" class="alert alert-success alert-dismissible fade show" role="alert"> 
+        {{ alertMessage }}
+    <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
+  </div>
+</div>

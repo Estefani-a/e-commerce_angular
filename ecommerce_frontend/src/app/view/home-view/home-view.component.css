@@ -1,0 +1,94 @@
+.home-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f7fafc;
+}
+  
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+  
+.card {
+    background-color: #edf2f7;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 16px;
+}
+  
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button.create-product {
+    background-color: #064386;
+}
+
+.button.create-product:hover {
+    background-color: #032c3b;
+}
+
+.button.list-products {
+    background-color: transparent;
+    color: #064386;
+    border: 2px solid #064386;
+}
+
+.button.list-products:hover {
+    background-color: #638AB3;
+    color: black;
+}
+
+.button.create-cart {
+    background-color: #ffab07;
+}
+
+.button.create-cart:hover {
+    background-color: #df9606;
+}
+
+.button.outline {
+    background-color: transparent;
+    color: #ffab07;
+    border: 2px solid #ffab07;
+}
+
+.button.outline:hover {
+    background-color: #ffd583;
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 400px;
+    }
+}
