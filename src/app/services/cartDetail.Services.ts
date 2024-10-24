@@ -8,7 +8,7 @@ import { CartService } from '../services/cart.Services';
 })
 export class CartDetailService {
 
-  private apiUrl = 'http://localhost:8080/detail';
+  private apiUrl = 'https://e-commerce-backend-angular.onrender.com/detail';
 
   constructor(private http: HttpClient, private cartService: CartService) { }
 

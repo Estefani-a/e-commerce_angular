@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
 })
 export class ProductService {
 
-  private apiUrl = 'http://localhost:8080/products'; //llama a los controladores del back
+  private apiUrl = 'https://e-commerce-backend-angular.onrender.com/products'; //llama a los controladores del back
 
   constructor(private http: HttpClient) { } //traigo con http client
 

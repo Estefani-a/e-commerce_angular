@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 
 export class CartService {
-  private apiUrl = 'http://localhost:8080/cart';
+  private apiUrl = 'https://e-commerce-backend-angular.onrender.com/cart';
 
   constructor(private http: HttpClient) {}
 
