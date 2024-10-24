@@ -30,6 +30,20 @@ export class CartListViewComponent implements OnInit {
         });
       });
     });
+
+    //Hardcodear algunos carritos de ejemplo
+    /*this.carts = [
+      { id: 1, type: 'Común', state: 'Activo', totalWithDiscount: 100 },
+      { id: 2, type: 'Promoción Especial', state: 'Cerrado', totalWithDiscount: 200 },
+      { id: 3, type: 'Usuario VIP', state: 'Activo', totalWithDiscount: 150 }
+    ];*/
+
+    //Hardcodear los detalles de cada carrito
+    /*this.cartDetails = [
+      { id: 1, totalWithDiscount: 10000 },
+      { id: 2, totalWithDiscount: 25000 },
+      { id: 3, totalWithDiscount: 150 }
+    ];*/
   }
 
   handleDelete(id: number) {
@@ -37,6 +51,9 @@ export class CartListViewComponent implements OnInit {
       this.carts = this.carts.filter(cart => cart.id !== id);
       console.log(`Carrito ${id} eliminado`);
     });
+    //Eliminar el carrito hardcodeado
+    /*this.carts = this.carts.filter(cart => cart.id !== id);
+    console.log(`Carrito ${id} eliminado`);*/
   }
 
   handleSelect(id: number) {

@@ -7,9 +7,9 @@ import { tap } from 'rxjs/operators';
 })
 export class ProductService {
 
-  private apiUrl = 'http://localhost:8080/products';
+  private apiUrl = 'http://localhost:8080/products'; //llama a los controladores del back
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } //traigo con http client
 
   getAllProducts() {
     return this.http.get(`${this.apiUrl}/get`);

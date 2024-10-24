@@ -37,6 +37,14 @@ export class ProductListViewComponent {
         console.log('Productos obtenidos con éxito');
       }
     });
+    //harcoded
+    /*this.products = [
+      { id: 1, name: 'Mouse', price: 23500 },
+      { id: 2, name: 'Teclado', price: 34000 },
+      { id: 3, name: 'Auriculares', price: 16000 },
+      { id: 4, name: 'Monitor', price: 350000 },
+      { id: 5, name: 'Laptop', price: 1650000},
+    ];*/
   }
 
   handleDelete(id: number) {
@@ -53,6 +61,10 @@ export class ProductListViewComponent {
         console.log(`Producto ${id} eliminado`);
       }
     });
+    
+    //Eliminar el producto hardcodeado
+    /*this.products = this.products.filter(product => product.id !== id);
+    console.log(`Producto ${id} eliminado`);*/
   }
 
 

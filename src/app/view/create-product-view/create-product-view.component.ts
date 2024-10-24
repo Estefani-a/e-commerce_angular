@@ -17,6 +17,9 @@ export class CreateProductViewComponent {
   productPrice: number | undefined;
   products: Array<{ name: string; price: number }> = [];
 
+  //Array local para almacenar los productos
+  //products: Array<{ id: number, name: string, price: number }> = [];
+
   constructor(public router: Router, private productService: ProductService) { }
 
   handleAddProduct(event: Event) {
@@ -31,6 +34,22 @@ export class CreateProductViewComponent {
       name: this.productName,
       price: this.productPrice
     };
+
+    //Crear un nuevo producto y agregarlo al array local
+    /*const newProduct = {
+      id: this.products.length + 1,
+      name: this.productName,
+      price: this.productPrice
+    };*/
+
+    //this.products.push(newProduct);
+    
+    //Limpiar los campos de entrada
+    /*this.productName = '';
+    this.productPrice = undefined;
+
+    alert(`Producto ${newProduct.name} creado con éxito!`);*/
+
 
     this.productService.createProduct(newProduct).subscribe((response: any) => {
       this.products.push(response);
@@ -48,5 +67,12 @@ export class CreateProductViewComponent {
     }, (error: any) => {
       console.error(error);
     });
+    
+    //Productos harcodeados
+    /*this.products = [
+      { id: 1, name: 'Mouse', price: 23500 },
+      { id: 2, name: 'Teclado', price: 34000 },
+      { id: 3, name: 'Auriculares', price: 16000 }
+    ];*/
   }
 }

@@ -19,7 +19,8 @@ export class CartDetailViewComponent implements OnInit {
   availableProducts: any[] = [];
   cartProducts: any[] = [];
   cart = { id: 2, type: 'Fecha_Especial', state: 'ABIERTO' }; //ejemplo de carrito
-  discounts = { total: 0, discountAmount: 0, totalWithDiscount: 0 };
+  discounts = { total: 100, discountAmount: 20, totalWithDiscount: 80 };
+  //discounts = { total: 0, discountAmount: 0, totalWithDiscount: 0 };
   successAlert = false;
   errorAlert = false;
   cartError = false;
@@ -66,6 +67,14 @@ export class CartDetailViewComponent implements OnInit {
         console.error('Error al obtener productos:', error);
       }
     );
+    //Productos harcodeados
+    /*this.availableProducts = [
+      { id: 1, name: 'Mouse', price: 23500 },
+      { id: 2, name: 'Teclado', price: 34000 },
+      { id: 3, name: 'Auriculares', price: 16000 },
+      { id: 4, name: 'Monitor', price: 350000 },
+      { id: 5, name: 'Laptop', price: 1650000},
+    ];*/
   }
 
   loadCartDetails(): void {
@@ -84,6 +93,15 @@ export class CartDetailViewComponent implements OnInit {
         console.error('Error al obtener detalles del carrito:', error);
       }
     });
+
+    //Harcoded
+    /*this.cart = { id: 2, type: 'Fecha_Especial', state: 'ABIERTO' };
+    this.discounts = {
+      total: 300,
+      totalWithDiscount: 250,
+      discountAmount: 50
+    };
+    this.discountDescription = 'Descuento especial por fecha';*/
   }
 
   loadCartProducts(): void {
@@ -99,6 +117,12 @@ export class CartDetailViewComponent implements OnInit {
         console.error('Error al obtener productos del carrito:', error);
       }
     );
+    //harcoded productos en el carrito
+    /*this.cartProducts = [
+      { id: 1, name: 'Mouse', price: 23500 },
+      { id: 2, name: 'Teclado', price: 34000 },
+      { id: 3, name: 'Auriculares', price: 16000 }
+    ]*/
   }
 
   handleAddProduct(productId: number): void {
@@ -124,6 +148,13 @@ export class CartDetailViewComponent implements OnInit {
       } else {
         this.errorAlert = true;
       }
+      /*if (!isProductInCart) {
+        this.cartProducts.push(productToAdd); //Añadir producto al carrito
+        this.successAlert = true;
+      } else {
+        this.errorAlert = true;
+        console.error('El producto ya está en el carrito');
+      }*/
     } else {
       console.error('Producto no encontrado');
     }
@@ -143,6 +174,9 @@ export class CartDetailViewComponent implements OnInit {
         this.errorAlert = true;
       }
     );
+    //para harcoded
+    /*this.cartProducts = this.cartProducts.filter(product => product.id !== productId); // Eliminar producto del carrito
+    this.successAlert = true;*/
   }
 
   handleBuyCart(): void {
