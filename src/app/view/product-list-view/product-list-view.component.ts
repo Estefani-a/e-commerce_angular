@@ -39,11 +39,11 @@ export class ProductListViewComponent {
     });
     //harcoded
     this.products = [
-      { id: 1, name: 'Mouse', price: 23500 },
-      { id: 2, name: 'Teclado', price: 34000 },
-      { id: 3, name: 'Auriculares', price: 16000 },
-      { id: 4, name: 'Monitor', price: 350000 },
-      { id: 5, name: 'Laptop', price: 1650000},
+      { id: 1, name: 'Impresora', price: 23500 },
+      { id: 2, name: 'Memoria USB', price: 24000 },
+      { id: 3, name: 'Auriculares Inalambricos', price: 16000 },
+      { id: 4, name: 'Cargador', price: 350000 },
+      { id: 5, name: 'Disco SSD', price: 1650000},
     ];
   }
 

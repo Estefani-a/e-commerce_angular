@@ -69,11 +69,11 @@ export class CartDetailViewComponent implements OnInit {
     );
     //Productos harcodeados
     this.availableProducts = [
-      { id: 1, name: 'Mouse', price: 23500 },
-      { id: 2, name: 'Teclado', price: 34000 },
-      { id: 3, name: 'Auriculares', price: 16000 },
-      { id: 4, name: 'Monitor', price: 350000 },
-      { id: 5, name: 'Laptop', price: 1650000},
+      { id: 1, name: 'Impresora', price: 23500 },
+      { id: 2, name: 'Memoria USB', price: 34000 },
+      { id: 3, name: 'Auriculares Inalámbricos', price: 16000 },
+      { id: 4, name: 'Cargador', price: 350000 },
+      { id: 5, name: 'Disco SSD', price: 1650000},
     ];
   }
 
@@ -97,9 +97,9 @@ export class CartDetailViewComponent implements OnInit {
     //Harcoded
     this.cart = { id: 2, type: 'Fecha_Especial', state: 'ABIERTO' };
     this.discounts = {
-      total: 300,
-      totalWithDiscount: 250,
-      discountAmount: 50
+      total: 423500,
+      totalWithDiscount: 317625,
+      discountAmount: 105875
     };
     this.discountDescription = 'Descuento especial por fecha';
   }
@@ -119,9 +119,10 @@ export class CartDetailViewComponent implements OnInit {
     );
     //harcoded productos en el carrito
     this.cartProducts = [
-      { id: 1, name: 'Mouse', price: 23500 },
-      { id: 2, name: 'Teclado', price: 34000 },
-      { id: 3, name: 'Auriculares', price: 16000 }
+      { id: 1, name: 'Impresora', price: 23500 },
+      { id: 2, name: 'Memoria USB', price: 34000 },
+      { id: 3, name: 'Auriculares Inalámbricos', price: 16000 },
+      { id: 4, name: 'Cargador', price: 350000 },
     ]
   }
 
