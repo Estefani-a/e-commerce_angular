@@ -39,11 +39,11 @@ export class CartListViewComponent implements OnInit {
     ];
 
     //Hardcodear los detalles de cada carrito
-    /*this.cartDetails = [
+    this.cartDetails = [
       { id: 1, totalWithDiscount: 10000 },
       { id: 2, totalWithDiscount: 25000 },
       { id: 3, totalWithDiscount: 150 }
-    ];*/
+    ];
   }
 
   handleDelete(id: number) {
@@ -51,7 +51,7 @@ export class CartListViewComponent implements OnInit {
       this.carts = this.carts.filter(cart => cart.id !== id);
       console.log(`Carrito ${id} eliminado`);
     });
-    
+
     //Eliminar el carrito hardcodeado
     this.carts = this.carts.filter(cart => cart.id !== id);
     console.log(`Carrito ${id} eliminado`);

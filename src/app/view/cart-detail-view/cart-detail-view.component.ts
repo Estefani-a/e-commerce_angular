@@ -68,13 +68,13 @@ export class CartDetailViewComponent implements OnInit {
       }
     );
     //Productos harcodeados
-    /*this.availableProducts = [
+    this.availableProducts = [
       { id: 1, name: 'Mouse', price: 23500 },
       { id: 2, name: 'Teclado', price: 34000 },
       { id: 3, name: 'Auriculares', price: 16000 },
       { id: 4, name: 'Monitor', price: 350000 },
       { id: 5, name: 'Laptop', price: 1650000},
-    ];*/
+    ];
   }
 
   loadCartDetails(): void {
@@ -95,13 +95,13 @@ export class CartDetailViewComponent implements OnInit {
     });
 
     //Harcoded
-    /*this.cart = { id: 2, type: 'Fecha_Especial', state: 'ABIERTO' };
+    this.cart = { id: 2, type: 'Fecha_Especial', state: 'ABIERTO' };
     this.discounts = {
       total: 300,
       totalWithDiscount: 250,
       discountAmount: 50
     };
-    this.discountDescription = 'Descuento especial por fecha';*/
+    this.discountDescription = 'Descuento especial por fecha';
   }
 
   loadCartProducts(): void {
@@ -118,11 +118,11 @@ export class CartDetailViewComponent implements OnInit {
       }
     );
     //harcoded productos en el carrito
-    /*this.cartProducts = [
+    this.cartProducts = [
       { id: 1, name: 'Mouse', price: 23500 },
       { id: 2, name: 'Teclado', price: 34000 },
       { id: 3, name: 'Auriculares', price: 16000 }
-    ]*/
+    ]
   }
 
   handleAddProduct(productId: number): void {
